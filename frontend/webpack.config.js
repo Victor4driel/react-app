@@ -3,7 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin') //extrei texto 
 
 module.exports = {
     entry: './src/index.jsx',
-    ouput: {
+    output: {
         path: __dirname + '/public',
         filename: './app.js'
     },
@@ -34,7 +34,7 @@ module.exports = {
             loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
         }, {
             test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
-            loader: 'file-loader'
+            loader: 'file'
         }]
     }
 }
