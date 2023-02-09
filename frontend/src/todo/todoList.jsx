@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { markAsDone, markAsPeding, del } from "./todoActions";
+import { markAsDone, markAsPeding, remove } from "./todoActions";
 
 import IconButton from "../template/iconButton";
 import '../template/custom.css'
@@ -25,7 +25,7 @@ const TodoList = props => {
                         hide={!todo.done}/>
                 
                     <IconButton style='danger' icon='trash-o'
-                        onClick={() => props.del(todo)}
+                        onClick={() => props.remove(todo)}
                         hide={!todo.done}/>
                 </td>
             </tr>
@@ -56,7 +56,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ markAsDone, markAsPeding, del }, dispatch)
+    return bindActionCreators({ markAsDone, markAsPeding, remove }, dispatch)
 }
 
 // function mapDispatchToProps(dispatch) {
