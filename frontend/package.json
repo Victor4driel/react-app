@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --progress --colors --inline --hot",
     "production": "webpack --progress -p",
-    "build": "webpack"
+    "build": "react-scripts build"
   },
   "keywords": [],
   "author": "",
